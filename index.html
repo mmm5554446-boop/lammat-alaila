@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>لمّة العيلة 🌷</title>
+
+<style>
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Tahoma, Arial, sans-serif;
+    color: #4b3741;
+    background: linear-gradient(180deg, #fffaf7, #fff0f6);
+    line-height: 1.8;
+}
+
+header {
+    text-align: center;
+    padding: 35px 15px;
+    background: linear-gradient(135deg, #f8dce8, #fff3e9);
+}
+
+header h1 {
+    margin: 0;
+    color: #8f315d;
+    font-size: 38px;
+}
+
+header p {
+    color: #806b75;
+}
+
+#today-date {
+    display: inline-block;
+    background: white;
+    padding: 6px 15px;
+    border-radius: 20px;
+}
+
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    padding: 12px;
+    background: #fffaf5;
+    border-bottom: 1px solid #efd3e0;
+}
+
+nav a {
+    text-decoration: none;
+    color: #8f315d;
+    background: white;
+    border: 1px solid #efd3e0;
+    border-radius: 20px;
+    padding: 7px 12px;
+}
+
+nav a:hover {
+    background: #f9e2ed;
+}
+
+main {
+    width: 92%;
+    max-width: 1100px;
+    margin: auto;
+    padding: 25px 0 45px;
+}
+
+.welcome {
+    text-align: center;
+    padding: 20px 10px;
+}
+
+.welcome h2 {
+    color: #8f315d;
+}
+
+.welcome p {
+    color: #806b75;
+}
+
+.meeting-box {
+    max-width: 550px;
+    margin: 18px auto;
+    padding: 12px;
+    border: 1px dashed #d99bb8;
+    background: white;
+    border-radius: 16px;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+    align-items: start;
+}
+
+.card {
+    background: white;
+    border: 1px solid #efd3e0;
+    border-radius: 22px;
+    padding: 22px;
+    box-shadow: 0 8px 22px #8e4e6b0c;
+}
+
+.card-icon {
+    font-size: 32px;
+}
+
+.card h3 {
+    color: #8f315d;
+    margin: 5px 0;
+}
+
+.card p {
+    color: #806b75;
+}
+
+.section-button {
+    display: inline-block;
+    border: none;
+    border-radius: 12px;
+    padding: 10px 16px;
+    background: #b34476;
+    color: white;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.section-button:hover {
+    background: #8f315d;
+}
+/* بطاقة ذكرى جدّنا الغالي */
+.grandpa-card {
+    text-align: center;
+    background: linear-gradient(145deg, #fffafd, #f9e2ed);
+    border: 1px solid #edc7d9;
+}
+
+.heart-button {
+    border: none;
+    background: transparent;
+    color: #b34476;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    margin: 15px auto;
+    padding: 10px;
+    font-family: inherit;
+}
+
+.heart-symbol {
+    font-size: 65px;
+    line-height: 1.2;
+    transition: transform 0.25s;
+}
+
+.heart-button:hover .heart-symbol {
+    transform: scale(1.12);
+}
+
+.heart-name {
+    font-size: 17px;
+    font-weight: bold;
+}
+
+.prayer-paper {
+    background: #fffdf8;
+    border: 1px solid #e6d3b5;
+    border-radius: 12px;
+    padding: 23px 18px;
+    margin-top: 20px;
+    text-align: center;
+    box-shadow: 0 8px 20px #78533a12;
+    animation: paper-open 0.6s ease;
+}
+
+.prayer-paper h3 {
+    color: #98623c;
+}
+
+.prayer-paper p {
+    color: #654c43;
+    font-size: 15px;
+    line-height: 2.2;
+    margin: 15px 0;
+}
+
+.prayer-signature {
+    color: #a64d76 !important;
+    font-weight: bold;
+}
+
+[hidden] {
+    display: none !important;
+}
+
+@keyframes paper-open {
+    from {
+        opacity: 0;
+        transform: translateY(-12px) scale(0.97);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+.detail-section {
+    margin-top: 24px;
+    padding: 22px;
+    background: white;
+    border: 1px solid #efd3e0;
+    border-radius: 20px;
+}
+
+.detail-section h2 {
+    color: #8f315d;
+}
+
+.note {
+    padding: 12px;
+    background: #fff6fa;
+    border-right: 4px solid #d98bb0;
+    border-radius: 10px;
+}
+
+footer {
+    text-align: center;
+    padding: 24px 14px;
+    color: #806b75;
+    background: #f9e7ef;
+}
+
+@media (max-width: 680px) {
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    .card {
+        padding: 19px;
+    }
+
+    nav a {
+        padding: 6px 10px;
+        font-size: 14px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header id="home">
+    <h1>🌷 لمّة العيلة 🌷</h1>
+    <p>مكان يجمعنا بالمحبة والذكرى والدعاء</p>
+    <div id="today-date">أهلًا وسهلًا بعيلتنا 🤍</div>
+</header>
+
+<nav>
+    <a href="#home">الرئيسية</a>
+    <a href="#attendance-info">الحضور</a>
+    <a href="#lesson-info">درس الدين</a>
+    <a href="#chat-info">دردشة العيلة</a>
+    <a href="#quiz-info">المسابقة</a>
+    <a href="#grandpa">دعاء لجدّنا</a>
+</nav>
+
+<main>
+    <section class="welcome">
+        <h2>يا أهلاً وسهلاً بأحلى عيلة 💗</h2>
+        <p>
+            هذا المكان إلنا كلنا؛ نلتقي فيه، ونتعلّم،
+            ونشارك لحظاتنا الحلوة، ونبقى قريبين من بعض.
+        </p>
+
+        <div class="meeting-box">
+            <strong>📅 موعد لمّة العيلة:</strong>
+            كل يوم ثلاثاء الساعة 10:00
+            <br>
+            <small>الله يديم المحبة والجمعة الحلوة بيننا 🤍</small>
+        </div>
+    </section>
+
+    <section class="cards">
+
+        <article class="card grandpa-card" id="grandpa">
+            <div class="card-icon">🌷🤍🌷</div>
+            <h3>دعاء لجدّنا الغالي</h3>
+            <p>ذكرى لا تغيب عن قلوبنا، ودعاء بالرحمة والمغفرة لا ينقطع.</p>
+
+            <button class="heart-button" type="button"
+                aria-expanded="false"
+                aria-controls="grandpa-prayer"
+                onclick="toggleGrandpaPrayer()">
+
+                <span class="heart-symbol" aria-hidden="true">♥</span>
+                <span class="heart-name">الحج رضا البني</span>
+                <span>اضغط لفتح رسالة الدعاء 🌸</span>
+            </button>
+
+            <div class="prayer-paper" id="grandpa-prayer" hidden>
+                <div style="font-size: 27px;">🤍 🌷 🤍</div>
+
+                <h3>دعاء من القلب لجدّنا الغالي</h3>
+
+                <p>
+                    اللهم ارحم جدّنا الحج رضا البني رحمةً واسعة،
+                    واغفر له واعفُ عنه، وأكرم نزله، ووسّع مدخله،
+                    ونوّر قبره، واجعله روضةً من رياض الجنة.
+                </p>
+
+                <p>
+                    اللهم آنس وحشته، وارفع درجته في المهديين،
+                    واجعل ما قدّمه من خير في ميزان حسناته،
+                    وأدخله الجنة برحمتك يا أرحم الراحمين.
+                </p>
+
+                <p>
+                    يا رب، اجعل ذكراه الطيبة حاضرةً في قلوبنا،
+                    وارزقنا برًّا يصل إليه بالدعاء والعمل الصالح،
+                    واجمعنا به في جنات النعيم.
+                </p>
+
+                <p>
+                    اللهم اغفر له وارحمه، وأسكنه الفردوس الأعلى،
+                    واجعل قبره نورًا وسكينةً ورضوانًا إلى يوم نلقاك.
+                </p>
+
+                <p class="prayer-signature">
+                    رحمك الله يا جدّنا الغالي، ستبقى في قلوبنا ودعائنا ما حيينا 🤍
+                </p>
+
+                <button class="section-button" type="button"
+                    onclick="toggleGrandpaPrayer(true)">
+                    إغلاق الرسالة 🌷
+                </button>
+            </div>
+        </article>
+
+        <article class="card">
+            <div class="card-icon">📝</div>
+            <h3>تسجيل الحضور</h3>
+            <p>قسم مخصص لتسجيل أسماء أفراد العيلة الذين حضروا اللمّة الأسبوعية.</p>
+            <a class="section-button" href="#attendance-info">فتح القسم</a>
+        </article>
+
+        <article class="card">
+            <div class="card-icon">📖</div>
+            <h3>درس الدين</h3>
+            <p>مكان لدرس ديني بسيط وفائدة نتشاركها ونستفيد منها مع بعض.</p>
+            <a class="section-button" href="#lesson-info">فتح القسم</a>
+        </article>
+
+        <article class="card">
+            <div class="card-icon">💬</div>
+            <h3>دردشة العيلة</h3>
+            <p>قسم مخصص للتواصل وتبادل الأخبار واللحظات الجميلة.</p>
+            <a class="section-button" href="#chat-info">فتح القسم</a>
+        </article>
+
+        <article class="card">
+            <div class="card-icon">🎯</div>
+            <h3>مسابقة العيلة</h3>
+            <p>أسئلة خفيفة وممتعة نختبر فيها معلوماتنا ونتعلم أشياء جديدة.</p>
+            <a class="section-button" href="#quiz-info">فتح القسم</a>
+        </article>
+
+    </section>
+    <section class="detail-section" id="attendance-info">
+        <h2>📝 تسجيل الحضور</h2>
+        <p class="note">
+            هذا القسم قيد التطوير. لاحقًا سنضيف نموذجًا لتسجيل أسماء أفراد العيلة.
+        </p>
+    </section>
+
+    <section class="detail-section" id="lesson-info">
+        <h2>📖 درس الدين</h2>
+        <p class="note">
+            هذا القسم قيد التطوير. لاحقًا سنضيف درسًا أسبوعيًا وفيديو وأسئلة قصيرة.
+        </p>
+    </section>
+
+    <section class="detail-section" id="chat-info">
+        <h2>💬 دردشة العيلة</h2>
+        <p class="note">
+            هذا القسم قيد التطوير. الدردشة الحقيقية تحتاج إلى ربط الموقع بخدمة تحفظ الرسائل.
+        </p>
+    </section>
+
+    <section class="detail-section" id="quiz-info">
+        <h2>🎯 مسابقة العيلة</h2>
+        <p class="note">
+            هذا القسم قيد التطوير. لاحقًا سنضيف أسئلة واختيارات ونتيجة للمسابقة.
+        </p>
+    </section>
+</main>
+
+<footer>
+    صُمّم بمحبة لعيلتنا 🤍
+    <br>
+    اللهم اجمعنا دائمًا على الخير والمحبة.
+</footer>
+
+<script>
+    const dateElement = document.getElementById("today-date");
+    const today = new Date();
+
+    dateElement.textContent = "اليوم: " + today.toLocaleDateString("ar-JO", {
+        weekday: "long",
+        year: "numeric",
+        month: "long",
+        day: "numeric"
+    });
+
+    function toggleGrandpaPrayer(forceClose = false) {
+        const paper = document.getElementById("grandpa-prayer");
+        const heartButton = document.querySelector("#grandpa .heart-button");
+
+        const shouldOpen = forceClose ? false : paper.hidden;
+
+        paper.hidden = !shouldOpen;
+        heartButton.setAttribute("aria-expanded", String(shouldOpen));
+
+        if (shouldOpen) {
+            paper.scrollIntoView({
+                behavior: "smooth",
+                block: "nearest"
+            });
+        }
+    }
+</script>
+
+</body>
+</html>
